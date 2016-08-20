@@ -1,2 +1,3 @@
 FROM scratch
-ADD rootfs /
+ADD rootfs.tar /
+CMD ["sh"]
