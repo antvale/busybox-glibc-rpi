@@ -25,10 +25,10 @@ In the first event you should install curl and tar utils and following the steps
 3. Unpack the file through `tar xfv jdk-8u101-linux-arm32-vfp-hflt.tar.gz` command. 
 4. Create a Dockerfile in the local folder as below:
 
->FROM antvale/busybox-glibc-rpi 
+>FROM antvale/busybox-glibc-rpi  
 >ADD jdk-8u101-linux-arm32-vfp-hflt/jre /opt/jre  
->ENV JAVA_HOME /opt/jre 
->ENV PATH ${PATH}:${JAVA_HOME}/bin 
+>ENV JAVA_HOME /opt/jre  
+>ENV PATH ${PATH}:${JAVA_HOME}/bin  
 
 4. Build the image using `docker build -t <image-id:tag> .` (please, replace the <image:tag> with yor identifier).
 
