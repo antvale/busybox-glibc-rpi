@@ -25,17 +25,17 @@ In the first event you should install curl and tar utils and following the steps
 3. Unpack the file through `tar xfv jdk-8u101-linux-arm32-vfp-hflt.tar.gz` command. 
 4. Create a Dockerfile in the local folder as below:
 
->FROM antvale/busybox-glibc-rpi
->ADD jdk-8u101-linux-arm32-vfp-hflt/jre /opt/jre
->ENV JAVA_HOME /opt/jre
->ENV PATH ${PATH}:${JAVA_HOME}/bin
+>FROM antvale/busybox-glibc-rpi 
+>ADD jdk-8u101-linux-arm32-vfp-hflt/jre /opt/jre  
+>ENV JAVA_HOME /opt/jre 
+>ENV PATH ${PATH}:${JAVA_HOME}/bin 
 
 4. Build the image using `docker build -t <image-id:tag> .` (please, replace the <image:tag> with yor identifier).
 
 To test the new image you can run the docker command `docker run <image-id:tag> java -version` that, if all is ok, shows the following output:
->java version "1.8.0_101"
->Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
->Java HotSpot(TM) Client VM (build 25.101-b13, mixed mode)
+>java version "1.8.0_101" 
+>Java(TM) SE Runtime Environment (build 1.8.0_101-b13) 
+>Java HotSpot(TM) Client VM (build 25.101-b13, mixed mode) 
 
 The final image will be a 115.3 MB size image with all is required to run jre program.
 
