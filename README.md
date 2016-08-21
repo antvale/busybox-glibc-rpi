@@ -39,13 +39,16 @@ java version "1.8.0_101"
 Java(TM) SE Embedded Runtime Environment (build 1.8.0_101-b13, headless) 
 Java HotSpot(TM) Embedded Client VM (build 25.101-b13, mixed mode) 
 ```
-The final image will be only **66.01MB** of size including everything is required to run a java application.
+The final image will be only **66.01MB** including everything is required to run a java application.
 
-####Requirements
-This images has been tested on RPI version 3 board with 32bit armv7 arch, Little Endian order, Raspbian GNU/Linux 8 (jessie)/4.4.11-v7+ kernel
+#### System Requirements
+##### Raspberry PI board
+This images has been tested on RPI version 3 board with **32bit armv7 arch**, **Little Endian** order, **Raspbian GNU/Linux 8 (jessie)**/**4.4.11-v7+** kernel
+##### Docker Engine
+Docker version 1.10.x for linux/arm system. Please download the debian package from [Hypriot](http://blog.hypriot.com/downloads/) and install it on your rpi.
 
-####Versions of tools and libreries used to build the image:
+####Tools and libs used to build the image:
 * Ubuntu 16.04.1 LTS (Xenial Xerus)
-* Buildroot (default cross-compiler, kerner headers 4.4.x):  buildroot-2016.05 
+* buildroot-2016.05 (with default cross-compiler toolchain, kernel headers 4.4.x)
 * Busybox 1.24.2 32bit
 * Glibc 2.22 32bit
