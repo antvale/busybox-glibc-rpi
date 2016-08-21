@@ -25,17 +25,18 @@ In the first event you should install curl and tar utils and following the steps
 3. Unpack the file through `tar xfv ejdk-8u101-linux-arm-sflt.tar.gz` command. 
 4. Create a Dockerfile in the local folder like that shown below to copy in the image the full embedded jre
 5. Build the image using `docker build -t <image-id:tag> .` (please, replace the `<image:tag>` with your identifier).
-> Dockerfile 
->FROM antvale/busybox-glibc-rpi  
->ADD ejdk1.8.0_101/linux_arm_sflt/jre /opt/jre  
->ENV JAVA_HOME /opt/jre  
->ENV PATH ${PATH}:${JAVA_HOME}/bin  
 
+Dockerfile 
+~~~docker
+FROM antvale/busybox-glibc-rpi 
+ADD ejdk1.8.0_101/linux_arm_sflt/jre /opt/jre 
+ENV JAVA_HOME /opt/jre 
+ENV PATH ${PATH}:${JAVA_HOME}/bin 
 
 To test the new image you can run the docker command `docker run <image-id:tag> java -version` that, if everything is ok, shows the following output:
->java version "1.8.0_101" 
->Java(TM) SE Embedded Runtime Environment (build 1.8.0_101-b13, headless) 
->Java HotSpot(TM) Embedded Client VM (build 25.101-b13, mixed mode) 
+*java version "1.8.0_101" 
+Java(TM) SE Embedded Runtime Environment (build 1.8.0_101-b13, headless) 
+Java HotSpot(TM) Embedded Client VM (build 25.101-b13, mixed mode)* 
 
 The final image will be only 66.01MB of size including everything is required to run a java application.
 
