@@ -33,12 +33,12 @@ ADD ejdk1.8.0_101/linux_arm_sflt/jre /opt/jre
 ENV JAVA_HOME /opt/jre 
 ENV PATH ${PATH}:${JAVA_HOME}/bin 
 ```
-To test the new image you can run the docker command `docker run <image-id:tag> java -version` that, if everything is ok, shows the following output:
-*java version "1.8.0_101" 
-Java(TM) SE Embedded Runtime Environment (build 1.8.0_101-b13, headless) 
-Java HotSpot(TM) Embedded Client VM (build 25.101-b13, mixed mode)* 
+To test the new image you can run the docker command `docker run <image-id:tag> java -version` that, if everything is ok, shows the following output: 
+*java version "1.8.0_101"*  
+*Java(TM) SE Embedded Runtime Environment (build 1.8.0_101-b13, headless)* 
+*Java HotSpot(TM) Embedded Client VM (build 25.101-b13, mixed mode)* 
 
-The final image will be only 66.01MB of size including everything is required to run a java application.
+The final image will be only **66.01MB** of size including everything is required to run a java application.
 
 ####Requirements
 This images has been tested on RPI version 3 board with 32bit armv7 arch, Little Endian order, Raspbian GNU/Linux 8 (jessie)/4.4.11-v7+ kernel
