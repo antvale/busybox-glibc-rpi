@@ -27,12 +27,12 @@ In the first event you should install curl and tar utils and following the steps
 5. Build the image using `docker build -t <image-id:tag> .` (please, replace the `<image:tag>` with your identifier).
 
 Dockerfile 
-~~~docker
+```docker
 FROM antvale/busybox-glibc-rpi 
 ADD ejdk1.8.0_101/linux_arm_sflt/jre /opt/jre 
 ENV JAVA_HOME /opt/jre 
 ENV PATH ${PATH}:${JAVA_HOME}/bin 
-
+```
 To test the new image you can run the docker command `docker run <image-id:tag> java -version` that, if everything is ok, shows the following output:
 *java version "1.8.0_101" 
 Java(TM) SE Embedded Runtime Environment (build 1.8.0_101-b13, headless) 
